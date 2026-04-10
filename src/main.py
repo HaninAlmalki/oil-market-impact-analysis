@@ -1,4 +1,4 @@
-from data_loader import load_oil_data
+from src.data_loader import load_oil_data
 
 def main():
     oil = load_oil_data()
