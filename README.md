@@ -55,6 +55,12 @@ This framework can be extended to estimate the potential impact of major disrupt
 
 ---
 
+## Limitations
+- Event dataset is manually curated
+- Model does not include predictive capabilities
+  
+---
+
 ## Run the Project
 
 ```bash
