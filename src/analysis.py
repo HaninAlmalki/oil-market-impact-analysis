@@ -1,11 +1,10 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import os   
 from src.impact_calculator import calculate_impact
-
 
 def run_analysis(oil, events_list):
     results = []
-
     for ev in events_list:
         imp = calculate_impact(oil, ev["date"])
         if imp is not None:
@@ -55,4 +54,9 @@ def plot_results(df):
     ax[1].set_xticklabels(["Sentiment", "Supply"], rotation=0)
 
     plt.tight_layout()
+
+    
+    os.makedirs("images", exist_ok=True)
+    plt.savefig("images/output.png", dpi=300)
+    
     plt.show()
